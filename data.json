@@ -1,0 +1,7 @@
+[
+    {"posicion": "Delantero","edad":36, "apodo":"La pulga","imagen":"https://img.a.transfermarkt.technology/portrait/big/28003-1694590254.jpg?lm=1"},
+    {"posicion": "Defensor","edad":25, "apodo":"El cuti","imagen":"https://img.a.transfermarkt.technology/portrait/big/355915-1665609429.jpg?lm=1" },
+    {"posicion": "Delantero","edad":35, "apodo":"El fideo", "imagen":"https://img.a.transfermarkt.technology/portrait/big/45320-1700648952.jpg?lm=1" },
+    {"posicion": "Centrocampista","edad":29, "apodo":"Motorcito","imagen":"https://img.a.transfermarkt.technology/portrait/big/255901-1686664116.jpg?lm=1"},
+    {"posicion":"Arquero", "edad":31, "apodo": "Dibu", "imagen":"https://img.a.transfermarkt.technology/portrait/big/111873-1668180824.jpg?lm=1"}  
+]

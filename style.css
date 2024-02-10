@@ -1,0 +1,15 @@
+body{
+    background-image: url(messi.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.blanco{
+    background-color: white;
+}
+
+.contenedor-icono svg{
+    color: white;
+}
