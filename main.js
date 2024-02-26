@@ -1,3 +1,5 @@
+let carrito= JSON.parse(localStorage.getItem("carrito")) || [];
+
 const jugadores= [
     {nombre: "Lionel Messi",precio:500, club:"Inter Miami",imagen:"https://http2.mlstatic.com/D_NQ_NP_924124-MLA69873290089_062023-O.webp"},
     {nombre: "Cristian Romero",precio:250, club:"Tottenham",imagen:"https://cdn11.bigcommerce.com/s-5e8c3uvulz/images/stencil/original/products/6936/19398/hero-kit-cristian-romero-mens-premier-league-tottenham-hotspur-home-shirt-202324__86749.1686202057.jpg?c=1" },
@@ -6,29 +8,21 @@ const jugadores= [
     {nombre:"Damian Martinez", precio:400, club: "Aston Villa", imagen:"https://http2.mlstatic.com/D_NQ_NP_747157-MLA48451777729_122021-O.webp"},
 ];
 
-localStorage.setItem("jugadores",JSON.stringify(jugadores))
-
-const agregarcarrito= (nombre,precio,club,imagen)=>{
-  let jugadoresjson= localStorage.getItem("jugadores")
-  let jugadores= JSON.parse(jugadoresjson)
-
-  let nuevacamiseta={
-    nombre,
-    precio,
-    club,
-    imagen
-  }
-  jugadores.push(nuevacamiseta)
-  localStorage.setItem("jugadores",JSON.stringify(jugadores))
-}
-
-let carrito=[]
-
 const agregar = (nombre) => {
     let jugadorencontrado=jugadores.find((jugador)=>jugador.nombre===nombre)
     carrito.push(jugadorencontrado)
+    localStorage.setItem("carrito",JSON.stringify(carrito))
     console.log(carrito)
 }
+
+// Al cargar la página, se verifica si hay elementos en el carrito en localStorage
+window.addEventListener('DOMContentLoaded', () => {
+  let carritoGuardado = localStorage.getItem("carrito");
+  if (carritoGuardado) {
+      carrito = JSON.parse(carritoGuardado);
+      // Aca podrías mostrar los elementos del carrito en la página nuevamente
+  }
+});
 
 jugadores.forEach((jugador)=>{
     let div= document.createElement("div")
